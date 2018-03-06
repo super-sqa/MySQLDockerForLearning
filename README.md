@@ -26,3 +26,29 @@ or
 ```
 $ python run_mysql_docker_container.py --print_docker_logs=True
 ```
+Use command line parameter --print_docker_logs=True if you want to output of the docker commands to be displayed.
+Give it time for the log to be printed. The process must finish before printing the logs.
+If you do not change the settings in the script here are the parameters that will be used.
+```
+    CONTAINER_NAME = "ssqa_mysql"
+    IMAGE = "mysql:5.6"
+    ROOT_PASSWORD = "password"
+```
+
+##### Example
+If the container run once before then there is the output. Note the 'print_docker_log' is False by default.
+```
+$ python run_mysql_docker_container.py
+
+```
+After the script complete you should get a success message or failure message.
+
+After getting success message run a docker command on your terminal like this, to see the running container
+```
+Container 'ssqa_mysql' exists. Starting it.
+Current status for container 'ssqa_mysql' is 'exited'. Attempting to start it.
+***************************************
+Started container 'ssqa_mysql'
+***************************************
+```
+
