@@ -4,6 +4,7 @@ Python script to run a mysql container that as some sample data.
 The script will start a container with existing folders as volumes. The existing folders have information for one database and two tables.
 
 **Database/Schema:**
+
      countries
 
 **Tables:**
