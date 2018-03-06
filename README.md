@@ -9,5 +9,6 @@ Tables:
   
 ### Dependency
 1. You must have docker installed and running on your local machine.
-2. You must install docker python skd
-    You can use pip to install the 
+2. You must install Python library for the Docker Engine API
+    You can use pip to install the library.
+    You find more informtion [here](https://github.com/docker/docker-py)
