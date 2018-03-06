@@ -13,7 +13,9 @@ Tables:
     * You can use pip to install the library.
     * You find more informtion [here](https://github.com/docker/docker-py)
     * Command to install (This is the version the script is tested with. Both Python 2 and Python 3 are ok)
-    ```pip install docker==3.1.0```
+    ```
+    pip install docker==3.1.0
+    ```
     
 ### Usage
 Simply run the script with python
