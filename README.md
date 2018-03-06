@@ -42,19 +42,50 @@ If you do not change the settings in the script here are the parameters that wil
 ```
 
 ##### Example
-If the container run once before then there is the output. Note the 'print_docker_log' is False by default.
+If the container run once before then it already exists and the script will just start it. Here is the output. Note the 'print_docker_log' is False by default.
 ```
+
 $ python run_mysql_docker_container.py
-
-```
-After the script complete you should get a success message or failure message.
-
-After getting success message run a docker command on your terminal like this, to see the running container
-```
 Container 'ssqa_mysql' exists. Starting it.
 Current status for container 'ssqa_mysql' is 'exited'. Attempting to start it.
 ***************************************
 Started container 'ssqa_mysql'
 ***************************************
+
+```
+
+If the container does not exist but the required image exists on the local drive then here is the output.
+
+```
+Container 'ssqa_mysql' does not exist. Running new container with name 'ssqa_mysql'
+Image 'mysql:5.6' exist on local drive. Starting a new container using the image.
+**********************************************
+Created container
+Container name: 'ssqa_mysql'
+Image used: 'mysql:5.6'
+Root password: 'password'
+Run command 'docker ps -a' to see all containers and statuses
+Run command 'docker ps' to see running containers and statuses
+**********************************************
+```
+
+If the image does not exist on the local machine then it will download the image. Here is example output.
+
+```
+Container 'ssqa_mysql' does not exist. Running new container with name 'ssqa_mysql'
+Image 'mysql:5.6' does not exist on local drive. Downloading.... will take few minutes ......
+**********************************************
+Created container
+Container name: 'ssqa_mysql'
+Image used: 'mysql:5.6'
+Root password: 'password'
+Run command 'docker ps -a' to see all containers and statuses
+Run command 'docker ps' to see running containers and statuses
+**********************************************
+```
+
+After getting success message run a docker command on your terminal like this, to see the running container
+```
+
 ```
 
