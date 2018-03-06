@@ -18,7 +18,8 @@ The script will start a container with existing folders as volumes. The existing
 2. You must install Python library for the Docker Engine API
     * You can use pip to install the library.
     * You find more informtion [here](https://github.com/docker/docker-py)
-    * Command to install (This is the version the script is tested with. Both Python 2 and Python 3 are ok)
+    * Command to install (This is the version the script is tested with, but you can try using the latest version if a newer version is available.)
+    * Both Python 2 and Python 3 are ok)
     ```
     pip install docker==3.1.0
     ```
@@ -85,7 +86,13 @@ Run command 'docker ps' to see running containers and statuses
 ```
 
 After getting success message run a docker command on your terminal like this, to see the running container
-```
 
 ```
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+659535a74243        mysql:5.6           "docker-entrypoint.s…"   12 minutes ago      Up 12 minutes       0.0.0.0:3306->3306/tcp   ssqa_mysql
+```
+
+As you can see port 3306 on the host is mapped to port 3306 in the container. Use any mysql client to connect to the database. Exmaple MySQL Workbench. If you need to use a different port, modify the script. Look for "ports" variable.
+
 
