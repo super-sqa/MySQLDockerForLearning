@@ -25,7 +25,7 @@ The script will start a container with existing folders as volumes. The existing
     ```
     
 ## Usage
-Simply run the script with python
+Simply run the script
 ```
 $ python run_mysql_docker_container.py
 ```
