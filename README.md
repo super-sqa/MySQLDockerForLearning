@@ -19,7 +19,7 @@ The script will start a container with existing folders as volumes. The existing
     * You can use pip to install the library.
     * You find more informtion [here](https://github.com/docker/docker-py)
     * Command to install (This is the version the script is tested with, but you can try using the latest version if a newer version is available.)
-    * Both Python 2 and Python 3 are ok)
+    * Both Python 2 and Python 3 are ok.
     ```
     pip install docker==3.1.0
     ```
