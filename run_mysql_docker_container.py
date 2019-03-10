@@ -110,7 +110,7 @@ class DockerRunner(object):
             volumes = {os.path.join(os.getcwd(), "mysql_volumes", "configurations"): {'bind': '/etc/mysql/conf.d', 'mode': 'rw'},
                        os.path.join(os.getcwd(), "mysql_volumes", "data"): {'bind': '/var/lib/mysql', 'mode': 'rw'}}
             environment = {"MYSQL_ROOT_PASSWORD": root_password}
-            ports = {"3306/tcp": "3306"}
+            ports = {"3306/tcp": "3308"}
 
             # run the container
             container = self.client.containers.run(image,
@@ -150,7 +150,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--print_docker_logs',
                         default='False',
-                        choices=['False', 'True'],
+                        choices=['FALSE', 'TRUE'],
                         type=str.upper,
                         required=False,
                         help="Option to print the output of docker commands to console.")
